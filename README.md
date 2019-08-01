@@ -1,1 +1,3 @@
 Latihan javascript
+
+dari netninja
