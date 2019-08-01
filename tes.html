@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Tes saja</h3>
+
+        <div>
+            Barang 1
+            <button onclick="kurangkan(1)"> - </button> 
+            <input type="number" id="jumlah_1" name="jumlah_1" value="1"> 
+            <button onclick="tambahkan(1, 2000)"> + </button> 
+        </div>
+        <div>
+            Barang 2
+            <button onclick="kurangkan(2)"> - </button> 
+            <input type="number" id="jumlah_2" name="jumlah_2" value="1"> 
+            <button onclick="tambahkan(2)"> + </button> 
+        </div>
+        <div>
+            Barang 3
+            <button onclick="kurangkan(3)"> - </button> 
+            <input type="number" id="jumlah_3" name="jumlah_3" value="1"> 
+            <button onclick="tambahkan(3)"> + </button> 
+        </div>
+    
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    function tambahkan(angka, hs){
+        
+        let nama_inputan = 'jumlah_'+angka;
+        let isi_awal = parseInt($('#'+nama_inputan).val());
+        let isi_sekarang = isi_awal + 1;
+        $('#'+nama_inputan).val(isi_sekarang);
+        let subtotal = isi_sekarang * hs;
+        alert(subtotal);
+    }
+
+    function kurangkan(angka){
+        let nama_inputan = 'jumlah_'+angka;
+        let isi_awal = parseInt($('#'+nama_inputan).val());
+        let isi_sekarang = isi_awal - 1;
+        if(isi_sekarang == 0)
+        {
+            $('#'+nama_inputan).val(1);
+        }
+        else
+        {
+            $('#'+nama_inputan).val(isi_sekarang);
+        }
+    }
+    
+    </script>
+</body>
+</html>
